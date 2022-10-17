@@ -125,7 +125,7 @@ export default {
       ),
     ],
   },
-  liberror: {
+  libmissing: {
     embeds: [
       new MessageEmbed(universalEmbed)
         .setTitle("Solving library errors (such as \"yourlib.h not found\")")
@@ -181,6 +181,25 @@ export default {
           value: "On the ATmega328P chips used on many Arduino boards you can pull up the pin by using `pinMode(pin, INPUT_PULLUP)`. If the pin is declared this way it is normally HIGH and all that is needed is a switch wired from the pin to ground. When the switch is closed the pin will go LOW. The example below shows pin 2 setup this way. Remember a inturnal resistor is no replacement for a current limiting resistor like you need for a led, or any kind of load.",
         }
         //"image": "https://www.arduino.cc/wiki/static/f7e18e95df4a8d274fc9129fa60eb428/928ea/PullUp.png"
+      ),
+    ],
+  },
+  hid: {
+    embeds: [
+      new MessageEmbed(universalEmbed)
+        .setTitle("Can your arduino be used as a keyboard, or mouse ?")
+        .addFields({
+          name:  "You want to use your arduino for a Human Interface Device?",
+          value: "Arduino has many boards that can be used as a mouse/keyboard natively. This is reffered to as a HID.",
+        },
+        {
+          name:  "Boards that are __NOT__ HID compliant.",
+          value: "Uno, Mega, Nano, Pro mini, are not capible of use as an HID device.",
+        },
+        {
+          name:  "Boards that __ARE__ HID compliant.",
+          value: "Leonardo, (Pro)Micro, Any other 8u2/16u2/at90usb8/162/32u2/32u4 compatible board, Zero, MKR1000.",
+        }
       ),
     ],
   },
